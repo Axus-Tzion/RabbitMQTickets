@@ -40,18 +40,18 @@ public class TicketSenderGUI {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"hardware", "software"});
-        tipoCombo.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"Hardware", "Software"});
+        tipoCombo.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 14));
 
         JTextArea descripcionArea = new JTextArea(5, 20);
-        descripcionArea.setFont(new Font("Segoe UI", Font.PLAIN, 14));
+        descripcionArea.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 14));
         descripcionArea.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createLineBorder(new Color(200, 200, 200)),
                 BorderFactory.createEmptyBorder(5, 5, 5, 5)
         ));
 
         JButton enviarBtn = new JButton("Enviar Ticket");
-        enviarBtn.setFont(new Font("Segoe UI", Font.BOLD, 14));
+        enviarBtn.setFont(new Font("Segoe UI Emoji", Font.BOLD, 14));
         enviarBtn.setBackground(new Color(70, 130, 180));
         enviarBtn.setForeground(Color.WHITE);
         enviarBtn.setFocusPainted(false);
