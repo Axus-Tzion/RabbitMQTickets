@@ -34,7 +34,7 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="module-library">
+    <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
           <root url="jar://$USER_HOME$/Downloads/slf4j-api-2.0.17.jar!/" />
@@ -61,5 +61,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="slf4j-simple-2.0.9" level="project" />
+    <orderEntry type="library" exported="" name="flatlaf-3.6-javadoc" level="project" />
   </component>
 </module>
