@@ -32,7 +32,7 @@ public class TicketReceiverGUI {
         frame.setLayout(new BorderLayout(10, 10));
 
         // Componentes
-        JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"Hardware", "Software"});
+        JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"hardware", "software"});
         JButton conectarBtn = new JButton("🔌 Conectar");
         JTextArea ticketArea = new JTextArea();
         JButton resolverBtn = new JButton("✅ Marcar como Resuelto");
@@ -67,7 +67,7 @@ public class TicketReceiverGUI {
                 channel = connection.createChannel();
                 channel.basicQos(1);
 
-                String queueName = tipo.equals("Hardware") ? RabbitManager.COLA_HARDWARE : RabbitManager.COLA_SOFTWARE;
+                String queueName = tipo.equals("hardware") ? RabbitManager.COLA_HARDWARE : RabbitManager.COLA_SOFTWARE;
 
                 DeliverCallback deliverCallback = (tag, delivery) -> {
                     deliveryTag = delivery.getEnvelope().getDeliveryTag();
@@ -96,6 +96,7 @@ public class TicketReceiverGUI {
             }
         });
 
+        // Acción al resolver
         resolverBtn.addActionListener(e -> {
             if (ticketActual != null && deliveryTag != -1) {
                 try {

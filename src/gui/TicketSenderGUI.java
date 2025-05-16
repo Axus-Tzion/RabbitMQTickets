@@ -40,7 +40,7 @@ public class TicketSenderGUI {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"Hardware", "Software"});
+        JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"hardware", "software"});
         tipoCombo.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 14));
 
         JTextArea descripcionArea = new JTextArea(5, 20);
