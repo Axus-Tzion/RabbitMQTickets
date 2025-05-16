@@ -14,30 +14,25 @@ public class TicketSenderGUI {
 
     public static void main(String[] args) {
         try {
-            // Configurar Look and Feel moderno (FlatLaf)
             UIManager.setLookAndFeel("com.formdev.flatlaf.FlatLightLaf");
         } catch (Exception ex) {
             try {
-                // Fallback a Nimbus si FlatLaf no está disponible
                 UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
 
-        // Configuración de la ventana principal
         JFrame frame = new JFrame("Generador de Tickets");
         frame.setSize(550, 400);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new BorderLayout());
         frame.setLocationRelativeTo(null); // Centrar ventana
 
-        // Panel principal con márgenes
         JPanel mainPanel = new JPanel(new BorderLayout());
         mainPanel.setBorder(new EmptyBorder(15, 15, 15, 15));
         mainPanel.setBackground(Color.WHITE);
 
-        // Panel de entrada con diseño mejorado
         JPanel inputPanel = new JPanel(new GridBagLayout());
         inputPanel.setBackground(Color.WHITE);
         GridBagConstraints gbc = new GridBagConstraints();
@@ -45,7 +40,6 @@ public class TicketSenderGUI {
         gbc.anchor = GridBagConstraints.WEST;
         gbc.fill = GridBagConstraints.HORIZONTAL;
 
-        // Componentes con estilo moderno
         JComboBox<String> tipoCombo = new JComboBox<>(new String[]{"hardware", "software"});
         tipoCombo.setFont(new Font("Segoe UI", Font.PLAIN, 14));
 
@@ -62,7 +56,6 @@ public class TicketSenderGUI {
         enviarBtn.setForeground(Color.WHITE);
         enviarBtn.setFocusPainted(false);
 
-        // Diseño con GridBagLayout para mejor organización
         gbc.gridx = 0;
         gbc.gridy = 0;
         inputPanel.add(new JLabel("Tipo de Ticket:"), gbc);

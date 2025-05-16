@@ -45,7 +45,6 @@ public class TicketReceiverGUI {
         topPanel.add(tipoCombo);
         topPanel.add(conectarBtn);
 
-        // Área central
         ticketArea.setEditable(false);
         ticketArea.setFont(new Font("Segoe UI Emoji", Font.PLAIN, 14));
         ticketArea.setLineWrap(true);
@@ -54,16 +53,13 @@ public class TicketReceiverGUI {
         JScrollPane scrollPane = new JScrollPane(ticketArea);
         scrollPane.setBorder(BorderFactory.createTitledBorder("📋 Detalles del Ticket"));
 
-        // Panel inferior
         JPanel bottomPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT, 10, 10));
         bottomPanel.add(resolverBtn);
 
-        // Agregar componentes
         frame.add(topPanel, BorderLayout.NORTH);
         frame.add(scrollPane, BorderLayout.CENTER);
         frame.add(bottomPanel, BorderLayout.SOUTH);
 
-        // Acción al conectar
         conectarBtn.addActionListener(e -> {
             String tipo = (String) tipoCombo.getSelectedItem();
             try {
@@ -100,7 +96,6 @@ public class TicketReceiverGUI {
             }
         });
 
-        // Acción al resolver
         resolverBtn.addActionListener(e -> {
             if (ticketActual != null && deliveryTag != -1) {
                 try {
